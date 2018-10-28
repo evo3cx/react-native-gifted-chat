@@ -6,6 +6,6 @@ it('should test if same day', () => {
 });
 
 it('should test if same user', () => {
-  const message = { user: { _id: 1 } };
+  const message = { user: { id: 1 } };
   expect(isSameUser(message, message)).toBe(true);
 });

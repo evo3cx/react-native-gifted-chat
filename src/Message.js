@@ -71,7 +71,7 @@ export default class Message extends React.PureComponent {
   }
 
   renderAvatar() {
-    if (this.props.user._id === this.props.currentMessage.user._id && !this.props.showUserAvatar) {
+    if (this.props.user.id === this.props.currentMessage.user.id && !this.props.showUserAvatar) {
       return null;
     }
     const avatarProps = this.getInnerComponentProps();

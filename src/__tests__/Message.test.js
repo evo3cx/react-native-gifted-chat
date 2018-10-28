@@ -6,7 +6,7 @@ import { Message } from '../GiftedChat';
 
 it('should render <Message /> and compare with snapshot', () => {
   const tree = renderer
-    .create(<Message user={{ _id: 1 }} currentMessage={{ user: { _id: 1 } }} />)
+    .create(<Message user={{ id: 1 }} currentMessage={{ user: { id: 1 } }} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -6,7 +6,7 @@ import { Bubble } from '../GiftedChat';
 
 it('should render <Bubble /> and compare with snapshot', () => {
   const tree = renderer
-    .create(<Bubble user={{ _id: 1 }} currentMessage={{ user: { _id: 1 } }} />)
+    .create(<Bubble user={{ id: 1 }} currentMessage={{ user: { id: 1 } }} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
