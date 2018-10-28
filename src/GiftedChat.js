@@ -331,7 +331,7 @@ class GiftedChat extends React.Component {
         ...message,
         user: this.props.user,
         createdAt: new Date(),
-        id: this.props.messageIdGenerator(),
+        client_message_id: this.props.messageIdGenerator(),
       };
     });
 
