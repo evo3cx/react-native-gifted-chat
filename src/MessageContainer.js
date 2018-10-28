@@ -84,8 +84,8 @@ export default class MessageContainer extends React.PureComponent {
   }
 
   renderRow({ item, index }) {
-    if (!item.id && item.id !== 0) {
-      console.warn('GiftedChat: `id` is missing for message', JSON.stringify(item));
+    if (!item.client_message_id && item.client_message_id !== 0) {
+      console.warn('GiftedChat: `client_message_id` is missing for message', JSON.stringify(item));
     }
     if (!item.user) {
       if (!item.system) {
@@ -99,7 +99,7 @@ export default class MessageContainer extends React.PureComponent {
 
     const messageProps = {
       ...restProps,
-      key: item.id,
+      key: item.client_message_id,
       currentMessage: item,
       previousMessage,
       nextMessage,
@@ -124,7 +124,7 @@ export default class MessageContainer extends React.PureComponent {
       <View style={styles.container}>
         <FlatList
           ref={(ref) => (this.flatListRef = ref)}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.client_message_id}
           enableEmptySections
           automaticallyAdjustContentInsets={false}
           inverted={this.props.inverted}
